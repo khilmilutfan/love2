@@ -1,0 +1,200 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center; /* Align text to center */
+}
+
+.gif-container {
+    width: 100%; /* Ensure GIF container fills screen width */
+    max-width: 200px; /* Set a max width for the GIF */
+    margin: 20px auto; /* Center the GIF container */
+    display: flex; /* Center the GIF */
+    justify-content: center; /* Center the GIF */
+    align-items: center; /* Center the GIF */
+    padding: 0 20px; /* Add some padding */
+}
+
+.tenor-gif-embed {
+    width: 100%; /* Ensure GIF scales to fit container */
+    height: auto; /* Maintain aspect ratio */
+}
+
+.container, .final-container {
+    display: none;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%; /* Ensure container fills screen width */
+    max-width: 400px; /* Limit max width */
+    margin: 20px; /* Add margin to container */
+}
+
+.heart {
+    position: relative;
+    width: 150px;
+    height: 150px;
+    background-color: red;
+    transform: rotate(-45deg);
+    animation: pulse 1.2s infinite;
+    margin: 20px 0; /* Add margin top and bottom */
+}
+
+.heart::before, .heart::after {
+    content: "";
+    position: absolute;
+    width: 150px;
+    height: 150px;
+    background-color: red;
+    border-radius: 50%;
+}
+
+.heart::before {
+    top: -75px;
+    left: 0;
+}
+
+.heart::after {
+    left: 75px;
+    top: 0;
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1) rotate(-45deg);
+    }
+    50% {
+        transform: scale(1.1) rotate(-45deg);
+    }
+    100% {
+        transform: scale(1) rotate(-45deg);
+    }
+}
+
+.love-text {
+    font-size: 28px; /* Slightly smaller font size for responsiveness */
+    font-weight: bold;
+    margin-bottom: 70px; /* Adjust distance between text and heart */
+    animation: colorChange 2s infinite; /* Color change animation */
+}
+
+@keyframes colorChange {
+    0% { color: #ff69b4; }
+    25% { color: #ff5252; }
+    50% { color: #4caf50; }
+    75% { color: #ffeb3b; }
+    100% { color: #2196f3; }
+}
+
+.question {
+    font-size: 20px; /* Smaller font size for responsiveness */
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+#welcome-message {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+button {
+    padding: 8px 16px;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 80px; /* Smaller button size */
+    transition: background-color 0.3s; /* Hover transition effect */
+    font-size: 16px; /* Button font size */
+}
+
+#enter-btn {
+    background-color: #ff5252;
+}
+
+#enter-btn:hover {
+    background-color: #ff7979;
+}
+
+/* Tombol Tidak */
+#no-btn {
+    background-color: #ff5252;
+}
+
+#no-btn:hover {
+    background-color: #ff7979;
+}
+
+/* Tombol Iya */
+#yes-btn {
+    background-color: #4caf50;
+}
+
+#yes-btn:hover {
+    background-color: #81c784;
+}
+
+.buttons {
+    display: flex;
+    justify-content: space-between; /* Spread buttons horizontally */
+    margin-bottom: 20px; /* Add bottom margin */
+    gap: 10px; /* Space between buttons */
+}
+
+.response-message {
+    font-size: 20px; /* Smaller font size for responsiveness */
+    text-align: center;
+    color: #ff69b4;
+    margin-bottom: 20px;
+}
+
+.small-heart {
+    display: inline-block;
+    width: 12px; /* Smaller size for small heart */
+    height: 12px;
+    background-color: red;
+    transform: rotate(-45deg);
+    margin-left: 5px;
+    animation: smallPulse 1s infinite;
+}
+
+.small-heart::before, .small-heart::after {
+    content: "";
+    position: absolute;
+    width: 12px; /* Smaller size for small heart */
+    height: 12px;
+    background-color: red;
+    border-radius: 50%;
+}
+
+.small-heart::before {
+    top: -8px;
+    left: 0;
+}
+
+.small-heart::after {
+    left: 8px;
+    top: 0;
+}
+
+@keyframes smallPulse {
+    0% {
+        transform: scale(1) rotate(-45deg);
+    }
+    50% {
+        transform: scale(1.1) rotate(-45deg);
+    }
+    100% {
+        transform: scale(1) rotate(-45deg);
+    }
+}
